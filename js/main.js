@@ -1,6 +1,16 @@
 $(document).ready(function(){
 
 
+    $('.top_menu_btn').click(function () {
+        $('.top_header_menu').toggleClass('open');
+        $('html').toggleClass('page-noscroll');
+
+        $('.top_header_menu .top_header_menu_close').click(function () {
+            $('.top_header_menu').removeClass('open');
+            $('html').removeClass('page-noscroll');
+        });
+        return false;
+    });
     $('.hamburger').click(function () {
         $('.main_menu').toggleClass('open');
         $('html').toggleClass('page-noscroll');
@@ -16,7 +26,17 @@ $(document).ready(function(){
             $(".main_menu.open").removeClass('open');
             $("html").removeClass('page-noscroll');
         }
+        if(!$(e.target).closest(".top_header_menu.open").length){
+            $(".top_header_menu.open").removeClass('open');
+            $("html").removeClass('page-noscroll');
+        }
         e.stopPropagation();
+    });
+
+
+    $('.main_menu .arrow').click(function(){
+        $(this).next().slideToggle();
+        $(this).toggleClass('act');
     });
 
 

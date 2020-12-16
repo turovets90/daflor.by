@@ -184,13 +184,17 @@ strong
   +ai-center
   +j-beetween
   padding: 5px 0
+  @media (max-width: 1200px)
+    padding: 10px 0
+  @media (max-width: 450px)
+    padding: 5px 0
 
 .top_menu_btn
   position: relative
   width: 25px
   height: 18px
   display: inline-block
-  @media (min-width: 992px)
+  @media (min-width: 1201px)
     display: none
   span
     display: inline-block
@@ -210,29 +214,84 @@ strong
       bottom: 0
 
 .top_header_menu
-  +flex
-  +ai-center
-  li
-    &:first-child
+  @media (max-width: 1200px)
+    //display: none
+    position: fixed
+    left: 0
+    top: 0
+    background: $red
+    width: 70%
+    height: 100%
+    z-index: 991
+    padding-top: 50px
+    +transition($transition_default)
+    +transform(translateX(-100%))
+    opacity: 0
+    &.open
+      opacity: 1
+      +transform(translateX(0))
+
+  .top_header_menu_close
+    position: absolute
+    right: 0
+    top: 0
+    background: #fff
+    width: 30px
+    height: 30px
+    cursor: pointer
+    &:before, &:after
+      +b_a
+      width: 20px
+      height: 2px
+      background: $red
+      +m_a
+    &:before
+      +transform(rotate(-45deg))
+    &:after
+      +transform(rotate(45deg))
+    @media (min-width: 1201px)
+      display: none
+
+  ul
+    +flex
+    +ai-center
+    +wrap
+    @media (max-width: 1200px)
+    li
+      @media (max-width: 1200px)
+        width: 100%
+      &:first-child
+        a
+          @media (min-width: 1201px)
+            padding-left: 0
       a
-        padding-left: 0
-    a
-      color: $black
-      font-size: 12px
-      display: inline-block
-      padding: 10px 15px
-      text-decoration: none
-      &:hover
-        text-decoration: underline
-        color: $green
+        color: $black
+        font-size: 12px
+        display: inline-block
+        padding: 10px 15px
+        text-decoration: none
+        @media (max-width: 1200px)
+          font-size: 16px
+          font-weight: 500
+          color: #fff
+        &:hover
+          text-decoration: underline
+          color: $green
 
 .top_header_contacts
   +flex
   +ai-center
   +j-end
+  @media (max-width: 450px)
+    +col
+    +ai-start
   li
     &:first-child
       margin-right: 30px
+      @media (max-width: 1200px)
+        margin-right: 15px
+      @media (max-width: 450px)
+        margin-bottom: 5px
 .location
   position: relative
   padding-left: 25px
@@ -252,8 +311,11 @@ strong
 .middle_header_flex
   +flex
   +wrap
-  +j-beetween
   +ai-center
+
+  .btn_default
+    @media (max-width: 1200px)
+
 
 .phone
   +flex
@@ -272,8 +334,101 @@ strong
     font-size: 44px
     font-weight: 700
     text-decoration: none
+    @media (max-width: 1200px)
+      font-size: 40px
+    @media (max-width: 991px)
+      font-size: 28px
+    @media (max-width: 767px)
+      font-size: 25px
     &:hover
       color: $green
+
+
+.middle_header_flex
+  .work_delivery
+    @media (max-width: 1200px)
+      display: none
+
+  .middle_header_flex_left
+    width: 26%
+    @media (max-width: 1200px)
+      width: 35%
+    @media (max-width: 767px)
+      width: 40%
+
+  .middle_header_flex_right
+    width: 74%
+    +flex
+    +ai-center
+    @media (min-width: 1201px)
+      +j-beetween
+
+    @media (max-width: 1200px)
+      width: 65%
+      +j-end
+      .phone
+        margin-right: 30px
+        @media (max-width: 991px)
+          margin-right: 15px
+        @media (max-width: 575px)
+          margin-right: 10px
+        @media (max-width: 375px)
+          margin-right: 5px
+      .btn_default
+        margin-right: 30px
+        @media (max-width: 991px)
+          margin-right: 15px
+        @media (max-width: 575px)
+          margin-right: 10px
+        @media (max-width: 375px)
+          margin-right: 5px
+      @media (max-width: 767px)
+        width: 60%
+
+    .btn_default
+      @media (min-width: 768px)
+        img
+          display: none
+      @media (max-width: 767px)
+        display: inline-block
+        width: 40px
+        height: 40px
+        +border-radius(50%)
+        position: relative
+        text-indent: -9999px
+      @media (max-width: 575px)
+        width: 30px
+        height: 30px
+      img
+        @media (max-width: 767px)
+          position: absolute
+          +m_a
+        @media (max-width: 575px)
+          max-height: 50%
+          max-width: 50%
+    .phone
+      .icons
+        @media (max-width: 767px)
+          display: none
+      a
+        @media (max-width: 767px)
+          display: inline-block
+          width: 40px
+          height: 40px
+          +border-radius(50%)
+          position: relative
+          text-indent: -9999px
+          background: $green
+        @media (max-width: 575px)
+          width: 30px
+          height: 30px
+        img
+          @media (max-width: 767px)
+            position: absolute
+            +m_a
+          @media (max-width: 575px)
+            max-height: 50%
+            max-width: 50%
 
 .work_delivery
   +flex
@@ -326,6 +481,10 @@ strong
   font-weight: 500
   line-height: 1
   border: 0
+  @media (max-width: 1200px)
+    height: 40px
+  @media (max-width: 767px)
+    height: 35px
   &:hover
     background: $green_hover
   &:focus
@@ -337,63 +496,185 @@ strong
   .icon
     display: flex
     margin-right: 12px
+    @media (max-width: 575px)
+      margin-right: 5px
   .text
     .basket_title
       color: $red
       font-size: 14px
       font-weight: 700
       margin-bottom: 5px
+      @media (max-width: 575px)
+        font-size: 12px
+        margin-bottom: 0
     .basket_price
       color: $black
       font-size: 12px
       text-transform: uppercase
+      @media (max-width: 575px)
+        font-size: 10px
 
 .middle_header
   padding: 22px 0
-
+  @media (max-width: 1200px)
+    padding: 15px 0
+  @media (max-width: 767px)
+    padding: 10px 0
 
 .bottom_header
   background: $violet
+  @media (max-width: 1200px)
+    padding: 10px 0
+    .container
+      +flex
+      +ai-center
+      +j-end
+
+
+.mm_btn
+  +flex
+  +ai-center
+  > span
+    color: #fff
+    margin-right: 10px
+    font-weight: 500
+    font-size: 16px
+  .hamburger
+    width: 30px
+    height: 20px
+    position: relative
+    cursor: pointer
+    span
+      position: absolute
+      left: 0
+      width: 100%
+      height: 2px
+      +border-radius(2px)
+      background: #fff
+      &:nth-child(1)
+        top: 0
+      &:nth-child(2)
+        top: 0
+        bottom: 0
+        margin: auto
+      &:nth-child(3)
+        bottom: 0
+  @media (min-width: 1201px)
+    display: none
 .main_menu
   position: relative
-  .close
-    @media (min-width: 992px)
+  @media (max-width: 1200px)
+    position: fixed
+    //opacity: 0
+    top: 0
+    right: 0
+    background: $violet
+    width: 80%
+    height: 100%
+    padding-top: 50px
+    +transition($transition_default)
+    +transform(translateX(100%))
+    opacity: 0
+    &.open
+      opacity: 1
+      +transform(translateX(0))
+
+  .mm_close
+    position: absolute
+    left: 0
+    top: 0
+    width: 30px
+    height: 30px
+    background: #fff
+    cursor: pointer
+    &:before, &:after
+      +b_a
+      width: 20px
+      height: 2px
+      background: $violet
+      +m_a
+    &:before
+      +transform(rotate(45deg))
+    &:after
+      +transform(rotate(-45deg))
+    @media (min-width: 1201px)
       display: none
   .nav
     +flex
     +wrap
     > li
-      flex-grow: 1
-      +flex
-      +ai-center
-      +j-center
-      height: 54px
-      padding: 5px
-      &:first-child
-        +j-start
-        padding-left: 0
-      &:last-child
-        +j-end
-        padding-right: 0
-      &:hover
-        > a
+      .arrow
+        position: absolute
+        right: 0
+        top: 4px
+        width: 30px
+        height: 30px
+        //border: 1px solid #fff
+        cursor: pointer
+        &.act
           &:after
-            +transform(rotate(-180deg))
-        .submenu_container
-          display: block
-          position: absolute
-          top: 100%
-          left: 0
-          width: 100%
-          +box-shadow(1px 0px 30px rgba(0, 0, 0, 0.15))
+            display: none
+        &:before, &:after
+          +b_a
+          +m_a
+          width: 20px
+          height: 2px
           background: #fff
-          z-index: 99
-          padding: 30px 45px
+        &:after
+          +transform(rotate(-90deg))
+        @media (min-width: 1201px)
+          display: none
+
+      @media (min-width: 1201px)
+        flex-grow: 1
+        +flex
+        +ai-center
+        +j-center
+        height: 54px
+        padding: 5px
+      @media (max-width: 1200px)
+        width: 100%
+        height: auto
+        padding: 10px
+        position: relative
+
+
+      &:first-child
+        @media (min-width: 1201px)
+          +j-start
+          padding-left: 0
+      &:last-child
+        @media (min-width: 1201px)
+          +j-end
+          padding-right: 0
+      &:hover
+        @media (min-width: 1201px)
+          > a
+            &:after
+              +transform(rotate(-180deg))
+          .submenu_container
+            display: block
+      .submenu_container
+          display: none
+          @media (max-width: 1200px)
+            padding: 20px 0
+          @media (min-width: 1201px)
+            position: absolute
+            top: 100%
+            left: 0
+            width: 100%
+            +box-shadow(1px 0px 30px rgba(0, 0, 0, 0.15))
+            background: #fff
+            z-index: 99
+            padding: 30px 45px
+
           .submenu
             > li
               position: relative
               padding-left: 20px
               margin-bottom: 15px
+              @media (max-width: 1200px)
+                margin-bottom: 10px
               &:last-child
                 margin-bottom: 0
               &:before
@@ -413,8 +694,12 @@ strong
                   color: $green
               ul
                 padding: 16px 0
+                @media (max-width: 1200px)
+                  padding: 10px 0
                 li
                   margin-bottom: 15px
+                  @media (max-width: 1200px)
+                    margin-bottom: 10px
                   &:last-child
                     margin-bottom: 0
                   a
@@ -425,19 +710,23 @@ strong
                     &:hover
                       color: $green
       + li
-        border-left: 1px dashed rgba(255, 255, 255, 0.35)
+        @media (min-width: 1201px)
+          border-left: 1px dashed rgba(255, 255, 255, 0.35)
+        @media (max-width: 1200px)
+          border-top: 1px dashed rgba(255, 255, 255, 0.35)
       &.has_child
         > a
-          &:after
-            content: ''
-            position: relative
-            display: inline-block
-            width: 8px
-            height: 5px
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L4 4L7 1' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
-            //+transition($transition_default)
-            margin-left: 4px
-            margin-bottom: 2px
+          @media (min-width: 1201px)
+            &:after
+              content: ''
+              position: relative
+              display: inline-block
+              width: 8px
+              height: 5px
+              background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L4 4L7 1' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+              //+transition($transition_default)
+              margin-left: 4px
+              margin-bottom: 2px
 
       > a
         color: #fff
@@ -448,3 +737,5 @@ strong
 
     .submenu_container
       display: none
+
+

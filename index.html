@@ -15,14 +15,17 @@
         <div class="container">
           <div class="top_header_flex">
             <div class="top_menu_btn"><span></span><span></span><span></span></div>
-            <ul class="top_header_menu">
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Новости и акции</a></li>
-              <li><a href="#">Отзывы</a></li>
-              <li><a href="#">Корпоративным клиентам</a></li>
-              <li><a href="#">Доставка и оплата</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
+            <div class="top_header_menu">
+              <div class="top_header_menu_close"></div>
+              <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Новости и акции</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Корпоративным клиентам</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
             <ul class="top_header_contacts">
               <li class="location">г.Минск, ул. Щорса, 11</li>
               <li class="location">г.Минск, пр-т Дзержинского 94.</li>
@@ -33,19 +36,23 @@
       <div class="middle_header">
         <div class="container">
           <div class="middle_header_flex">
-            <div class="logo"><a href="#"><img src="img/logo.svg"/></a></div>
-            <div class="phone">
-              <div class="icons"><img src="img/a1.svg"/><img src="img/life.svg"/><img src="img/mts.svg"/></div><a href="tel: 681 00 08">681 00 08</a>
+            <div class="middle_header_flex_left">
+              <div class="logo"><a href="#"><img src="img/logo.svg"/></a></div>
             </div>
-            <ul class="work_delivery">
-              <li class="work">С 08:00 до 21:00 ежедневно</li>
-              <li class="delivery"><strong>Бесплатная доставка по г.Минску от 50 руб.</strong><span>(Время доставки в течение 1 часа *)</span></li>
-            </ul>
-            <button class="btn_default" data-toggle="modal" data-target="#feedback">Заказть звонок</button>
-            <div class="basket_link"><span class="icon"><img src="img/basket.svg"/></span>
-              <div class="text">
-                <div class="basket_title">Корзина</div>
-                <div class="basket_price">0 BYN</div>
+            <div class="middle_header_flex_right">
+              <div class="phone">
+                <div class="icons"><img src="img/a1.svg"/><img src="img/life.svg"/><img src="img/mts.svg"/></div><a href="tel: 681 00 08">681 00 08<img src="img/phone.svg"/></a>
+              </div>
+              <ul class="work_delivery">
+                <li class="work">С 08:00 до 21:00 ежедневно</li>
+                <li class="delivery"><strong>Бесплатная доставка по г.Минску от 50 руб.</strong><span>(Время доставки в течение 1 часа *)</span></li>
+              </ul>
+              <button class="btn_default" data-toggle="modal" data-target="#feedback">Заказть звонок<img src="img/email.svg"/></button>
+              <div class="basket_link"><span class="icon"><img src="img/basket.svg"/></span>
+                <div class="text">
+                  <div class="basket_title">Корзина</div>
+                  <div class="basket_price">0 BYN</div>
+                </div>
               </div>
             </div>
           </div>
@@ -53,14 +60,17 @@
       </div>
       <div class="bottom_header">
         <div class="container">
+          <div class="mm_btn"><span>Каталог</span>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+          </div>
           <div class="main_menu">
-            <div class="close"></div>
+            <div class="mm_close"></div>
             <ul class="nav">
               <li class="has_child"><a href="#">Цветы</a>
                 <div class="arrow"></div>
                 <div class="submenu_container">
                   <div class="row">
-                    <div class="col-12 col-xl-2">
+                    <div class="col-12 col-md-3 col-xl-2">
                       <ul class="submenu">
                         <li><a href="#">Хризантемы 0</a>
                           <ul>
@@ -102,7 +112,7 @@
                 <div class="arrow"></div>
                 <div class="submenu_container">
                   <div class="row">
-                    <div class="col-12 col-xl-2">
+                    <div class="col-12 col-md-3 col-xl-2">
                       <ul class="submenu">
                         <li><a href="#">Хризантемы 1</a>
                           <ul>
@@ -144,7 +154,7 @@
                 <div class="arrow"></div>
                 <div class="submenu_container">
                   <div class="row">
-                    <div class="col-12 col-xl-2">
+                    <div class="col-12 col-md-3 col-xl-2">
                       <ul class="submenu">
                         <li><a href="#">Хризантемы 2</a>
                           <ul>
@@ -186,7 +196,7 @@
                 <div class="arrow"></div>
                 <div class="submenu_container">
                   <div class="row">
-                    <div class="col-12 col-xl-2">
+                    <div class="col-12 col-md-3 col-xl-2">
                       <ul class="submenu">
                         <li><a href="#">Хризантемы 3</a>
                           <ul>
@@ -228,7 +238,7 @@
                 <div class="arrow"></div>
                 <div class="submenu_container">
                   <div class="row">
-                    <div class="col-12 col-xl-2">
+                    <div class="col-12 col-md-3 col-xl-2">
                       <ul class="submenu">
                         <li><a href="#">Хризантемы 4</a>
                           <ul>
@@ -270,7 +280,7 @@
                 <div class="arrow"></div>
                 <div class="submenu_container">
                   <div class="row">
-                    <div class="col-12 col-xl-2">
+                    <div class="col-12 col-md-3 col-xl-2">
                       <ul class="submenu">
                         <li><a href="#">Хризантемы 5</a>
                           <ul>
@@ -312,7 +322,7 @@
                 <div class="arrow"></div>
                 <div class="submenu_container">
                   <div class="row">
-                    <div class="col-12 col-xl-2">
+                    <div class="col-12 col-md-3 col-xl-2">
                       <ul class="submenu">
                         <li><a href="#">Хризантемы 6</a>
                           <ul>
@@ -354,7 +364,7 @@
                 <div class="arrow"></div>
                 <div class="submenu_container">
                   <div class="row">
-                    <div class="col-12 col-xl-2">
+                    <div class="col-12 col-md-3 col-xl-2">
                       <ul class="submenu">
                         <li><a href="#">Хризантемы 7</a>
                           <ul>
@@ -396,7 +406,7 @@
                 <div class="arrow"></div>
                 <div class="submenu_container">
                   <div class="row">
-                    <div class="col-12 col-xl-2">
+                    <div class="col-12 col-md-3 col-xl-2">
                       <ul class="submenu">
                         <li><a href="#">Хризантемы 8</a>
                           <ul>
@@ -438,7 +448,7 @@
                 <div class="arrow"></div>
                 <div class="submenu_container">
                   <div class="row">
-                    <div class="col-12 col-xl-2">
+                    <div class="col-12 col-md-3 col-xl-2">
                       <ul class="submenu">
                         <li><a href="#">Хризантемы 9</a>
                           <ul>
