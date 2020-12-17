@@ -43,12 +43,86 @@ $(document).ready(function(){
     $(".main_slider").slick({
         infinite: true,
         arrows: false,
-        dots: false,
-        autoplay: true,
-        speed: 3000,
-        autoplaySpeed: 3000,
+        dots: true,
+        //autoplay: true,
+        //speed: 3000,
+        //autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1
+    });
+
+    $('.amount .down').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+    });
+    $('.amount .up').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+    });
+
+
+    $('.product_slider').each(function(){
+        var item=$(this).find('.product_slider_item');
+        if(item.length > 5){
+            $(this).slick({
+                autoplay: false,
+                dots: true,
+                arrows: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 575,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }else if($(window).innerWidth() < 575 && this.length > 1){
+            $(this).slick({
+                autoplay: false,
+                dots: false,
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        }else if($(window).innerWidth() < 767 && this.length > 2){
+            $(this).slick({
+                autoplay: false,
+                dots: false,
+                arrows: true,
+                slidesToShow: 2,
+                slidesToScroll: 1
+            });
+        }else if($(window).innerWidth() < 991 && this.length > 3){
+            $(this).slick({
+                autoplay: false,
+                dots: false,
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            });
+        }
+
     });
 
 
