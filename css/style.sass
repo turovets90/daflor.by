@@ -1229,3 +1229,640 @@ h2, .h2, .section_title
         padding: 0 20px
 
 
+.red
+  color: $red
+
+.inst
+  background: rgba(160, 208, 83, 0.1)
+
+
+.inst_list
+  .inst_item
+    margin-bottom: 30px
+    .inst_item_img
+      height: 225px
+      width: 100%
+      background-size: cover
+      background-position: center
+      @media (max-width: 575px)
+        height: 180px
+      +flex
+      +ai-center
+      padding: 30px
+      text-decoration: none
+      @media (max-width: 575px)
+        padding: 15px
+      &:hover
+        text-decoration: none
+      .inst_item_img_content
+        font-family: $Magnolia
+        .title
+          color: $black
+          font-size: 22px
+          line-height: 31px
+          margin-bottom: 13px
+          @media (max-width: 1200px)
+            line-height: 1.2
+            font-size: 20px
+            margin-bottom: 8px
+        span
+          font-size: 16px
+    .inst_item_body
+      background: #fff
+      padding: 22px 30px
+      @media (max-width: 575px)
+        padding: 15px
+      .meta
+        +flex
+        +ai-center
+        +j-beetween
+        margin-bottom: 20px
+        .likes
+          position: relative
+          display: inline-block
+          color: #414141
+          font-size: 12px
+          font-weight: 500
+          padding-left: 30px
+          &:before
+            +b_a
+            left: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            width: 20px
+            height: 18px
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='18' viewBox='0 0 20 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.5 0C12.76 0 11.09 0.794551 10 2.05014C8.91 0.794551 7.24 0 5.5 0C2.42 0 0 2.37384 0 5.3951C0 9.103 3.4 12.1243 8.55 16.715L10 18L11.45 16.7052C16.6 12.1243 20 9.103 20 5.3951C20 2.37384 17.58 0 14.5 0ZM10.1 15.2534L10 15.3515L9.9 15.2534C5.14 11.0256 2 8.22997 2 5.3951C2 3.43324 3.5 1.96185 5.5 1.96185C7.04 1.96185 8.54 2.93297 9.07 4.27684H10.94C11.46 2.93297 12.96 1.96185 14.5 1.96185C16.5 1.96185 18 3.43324 18 5.3951C18 8.22997 14.86 11.0256 10.1 15.2534Z' fill='%23414141'/%3e%3c/svg%3e ")
+        .date
+          color: $black
+          font-weight: 300
+          font-size: 12px
+      .desc
+        font-size: 14px
+        font-weight: 300
+        line-height: 22px
+.news
+  background: #F2F3F4
+
+.news_list
+  .news_item
+    +transition($transition_default)
+    margin-bottom: 30px
+    @media (max-width: 1200px)
+      +box-shadow(1px 2px 25px rgba(0, 0, 0, 0.07))
+    @media (min-width: 1201px)
+      &:hover
+        position: relative
+        z-index: 2
+        +box-shadow(1px 2px 25px rgba(0, 0, 0, 0.07))
+        .news_item_body
+          background: #fff
+          padding: 22px 30px
+          .desc
+            opacity: 1
+          .btn_default
+            opacity: 1
+    .news_item_img
+      +flex
+      width: 100%
+      height: 225px
+      background-size: cover
+      background-position: center
+      @media (max-width: 575px)
+        height: 180px
+    .news_item_body
+      padding: 22px 0
+      +transition($transition_default)
+      min-height: 265px
+      @media (max-width: 1200px)
+        min-height: auto
+        background: #fff
+        padding: 22px 30px
+      @media (max-width: 575px)
+        padding: 15px
+
+
+
+      .date
+        font-size: 14px
+        font-weight: 300
+        line-height: 22px
+        margin-bottom: 10px
+
+      .news_item_name
+        display: inline-block
+        color: $black
+        font-size: 16px
+        font-weight: 500
+        line-height: 19px
+        text-decoration: none
+        margin-bottom: 15px
+        display: -webkit-box
+        overflow: hidden
+        text-overflow: ellipsis
+        -webkit-line-clamp: 2
+        max-height: 38px
+        &:hover
+          text-decoration: none
+          color: $green
+      .desc
+        font-size: 14px
+        font-weight: 300
+        line-height: 22px
+        margin-bottom: 25px
+        display: -webkit-box
+        overflow: hidden
+        text-overflow: ellipsis
+        -webkit-line-clamp: 3
+        max-height: 67px
+        @media (min-width: 1201px)
+          +transition($transition_default)
+          opacity: 0
+      .btn_default
+        margin: auto
+        @media (min-width: 1201px)
+          opacity: 0
+          +transition($transition_default)
+.why_choose_us
+  background: $green
+  color: #fff
+  position: relative
+  > img
+    position: absolute
+    bottom: -134px
+    right: 9%
+    @media (max-width: 1920px)
+      right: 5%
+    @media (max-width: 1600px)
+      right: 0
+    @media (max-width: 1200px)
+      display: none
+  .why_choose_us_flex
+    +flex
+    +ai-center
+    +wrap
+    @media (max-width: 1200px)
+      +j-center
+
+    .item
+      +flex
+      +ai-start
+      max-width: 280px
+      margin-right: 20px
+      margin-bottom: 30px
+      @media (max-width: 767px)
+        width: 100%
+        +col
+        +ai-center
+      img
+        margin-right: 12px
+      .text
+        @media (max-width: 767px)
+          text-align: center
+        span
+          display: block
+          &.title
+            font-size: 20px
+            font-family: $Magnolia
+            margin-bottom: 15px
+            @media (max-width: 767px)
+              margin-bottom: 5px
+          &.desc
+            font-size: 15px
+            line-height: 20px
+
+
+.slick-slider
+  .slick-arrow
+    width: 30px
+    height: 30px
+    +border-radius(50%)
+    background: #A0D053
+    +box-shadow( 1px 4px 25px rgba(0, 0, 0, 0.1))
+    z-index: 4
+    +transition($transition_default)
+    &:hover
+      background:  #6CA737
+    &:focus
+      background: $violet
+    &:before
+      +b_a
+      +m_a
+      width: 8px
+      height: 12px
+  .slick-prev
+    left: -5px
+    @media (max-width: 1200px)
+      left: 5px
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 1L1 6L7 11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  .slick-next
+    right: -5px
+    @media (max-width: 1200px)
+      right: 5px
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 11L7 6L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+.section_header
+  position: relative
+  margin-bottom: 20px
+  @media (max-width: 1200px)
+    text-align: center
+    .subtitle
+      margin-bottom: 10px
+  .h2, h2
+    color: $violet
+    padding-bottom: 0
+  a.all
+    @media (min-width: 1201px)
+      position: absolute
+      right: 0
+      bottom: 0
+
+
+.subtitle
+  text-align: center
+  font-size: 16px
+  font-weight: 500
+.reviews_list
+  +flex
+  +wrap
+  .item
+    &:nth-child(3n+1)
+      .reviews_item
+        background: #E6E1EB
+    &:nth-child(3n+2)
+      .reviews_item
+        background: #EEDEE7
+    &:nth-child(3n+3)
+      .reviews_item
+        background: #EAF0E4
+  .reviews_item
+    padding: 35px 30px 20px
+    margin-bottom: 30px
+    .reviews_item_header
+      +flex
+      +ai-end
+      +j-beetween
+      margin-bottom: 18px
+      .date_author
+        .date
+          font-size: 12px
+          font-weight: 300
+          margin-bottom: 5px
+        .author
+          font-size: 16px
+          font-weight: 500
+          line-height: 19px
+      .stars
+        +flex
+        +ai-center
+        margin-bottom: 5px
+        span
+          +flex
+          width: 12px
+          height: 12px
+          + span
+            margin-left: 3px
+          &.star
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 10.0496L8.90991 11.8912C9.44281 12.2287 10.0949 11.7298 9.95468 11.0988L9.18337 7.63582L11.7567 5.3027C12.2265 4.87717 11.9741 4.07011 11.357 4.01875L7.97033 3.71794L6.64509 0.445713C6.40669 -0.148571 5.59331 -0.148571 5.35491 0.445713L4.02967 3.71061L0.642956 4.01142C0.025914 4.06278 -0.226512 4.86983 0.243281 5.29536L2.81663 7.62848L2.04532 11.0915C1.90509 11.7224 2.55719 12.2213 3.09009 11.8838L6 10.0496Z' fill='%23A0D053'/%3e%3c/svg%3e ")
+          &.star_half
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.309 4.0163L8.63304 3.70834L7.19762 0.445441C6.93939 -0.14848 6.05839 -0.14848 5.80016 0.445441L4.36473 3.71567L0.696416 4.0163C0.0280687 4.06763 -0.245346 4.87418 0.263509 5.29946L3.05082 7.63115L2.21539 11.092C2.06349 11.7226 2.76981 12.2212 3.34702 11.8839L6.49889 10.0508L9.65075 11.8913C10.228 12.2285 10.9343 11.7299 10.7824 11.0994L9.94695 7.63115L12.7343 5.29946C13.2431 4.87418 12.9773 4.06763 12.309 4.0163ZM6.49889 8.67968V1.86059L7.79761 4.82286L11.1242 5.10149L8.60266 7.21321L9.36215 10.3515L6.49889 8.67968Z' fill='%23A0D053'/%3e%3c/svg%3e ")
+          &.star_empty
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.3621 4.0163L7.96896 3.70834L6.64395 0.445441C6.40559 -0.14848 5.59236 -0.14848 5.35399 0.445441L4.02898 3.71567L0.642846 4.0163C0.0259096 4.06763 -0.226474 4.87418 0.243239 5.29946L2.81614 7.63115L2.04497 11.092C1.90476 11.7226 2.55675 12.2212 3.08956 11.8839L5.99897 10.0508L8.90839 11.8913C9.4412 12.2285 10.0932 11.7299 9.95297 11.0994L9.1818 7.63115L11.7547 5.29946C12.2244 4.87418 11.979 4.06763 11.3621 4.0163ZM5.99897 8.67968L3.36297 10.3441L4.06404 7.20587L1.73651 5.09416L4.80717 4.81553L5.99897 1.86059L7.19779 4.82286L10.2685 5.10149L7.94092 7.21321L8.64198 10.3515L5.99897 8.67968Z' fill='%23A0D053'/%3e%3c/svg%3e ")
+    .reviews_item_body
+      font-weight: 300
+      font-size: 14px
+      line-height: 22px
+
+.reviews
+  padding-bottom: 35px
+.reviews_slider
+  .slick-dots
+    bottom: -15px
+
+
+
+.steps
+  background: $green
+  color: #fff
+  .steps_list
+    +flex
+    +wrap
+    +j-beetween
+    @media (max-width: 1200px)
+      +j-center
+    .item
+      width: 25%
+      margin-bottom: 30px
+      @media (max-width: 1200px)
+        width: 33.33%
+      @media (max-width: 991px)
+        width: 50%
+      @media (max-width: 767px)
+        width: 100%
+      .step
+        color: rgba(255, 255, 255, 0.55)
+        font-size: 50px
+        line-height: 1.2
+        font-family: $Magnolia
+        position: relative
+        margin-bottom: 10px
+        @media (max-width: 767px)
+          font-size: 40px
+        &:before
+          +b_a
+          right: 33px
+          top: 0
+          bottom: 0
+          margin: auto
+          border: 1px dashed rgba(255, 255, 255, 0.55)
+          width: 99px
+          height: 0
+      .step_text
+        padding-left: 60px
+        @media (max-width: 767px)
+          padding-left: 30px
+        .step_title
+          font-family: $Magnolia
+          font-size: 20px
+          margin-bottom: 10px
+          @media (min-width: 576px)
+            white-space: nowrap
+
+        .step_desc
+          font-size: 15px
+          line-height: 22px
+
+
+
+.main_seotext
+  background: #F2F3F4
+  padding: 30px 0 10px
+  font-size: 12px
+  line-height: 16px
+  h3, .h3
+    font-size: 14px
+    text-transform: uppercase
+    margin-bottom: 16px
+
+
+.main_delivery
+  background: $violet
+  color: #fff
+  .h2, h2
+    padding-bottom: 0
+  .subtitle
+    margin-bottom: 25px
+  ul
+    margin: 0
+    padding: 0
+    li
+      margin-bottom: 30px
+      display: inline-block
+      padding-left: 25px
+      font-size: 15px
+      font-weight: 300
+      line-height: 22px
+      &:before
+        +b_a
+        left: 0
+        top: 5px
+        background: #fff
+        +border-radius(50%)
+        width: 9px
+        height: 9px
+
+
+footer
+  background: url(../img/footer_bg.png) top center no-repeat
+  @media (max-width: 991px)
+    background: $violet_light
+
+
+.container_footer
+  padding: 30px 100px 127px
+  @media (max-width: 1200px)
+    padding: 30px 30px 127px
+  @media (max-width: 991px)
+    padding: 30px 15px
+  .logo
+    margin-bottom: 20px
+.footer_row1
+  +flex
+  +wrap
+  margin-bottom: 20px
+  .footer_catalog
+    width: 81%
+    @media (max-width: 991px)
+      width: 100%
+      margin-bottom: 20px
+    ul
+      +flex
+      +wrap
+      li
+        //width: 16.66%
+        margin-right: 60px
+        margin-bottom: 5px
+        @media (max-width: 991px)
+          margin-right: 30px
+        @media (max-width: 575px)
+          width: 100%
+        a
+          color: $black
+          font-size: 16px
+          text-decoration: none
+          display: inline-block
+          padding: 5px 0
+          @media (max-width: 991px)
+            padding: 3px 0
+          &:hover
+            text-decoration: none
+            color: $green
+
+  .footer_contacts
+    width: 19%
+    @media (max-width: 991px)
+      width: 100%
+    li
+      margin-bottom: 10px
+      a
+        color: $black
+        font-size: 16px
+        font-weight: 500
+        text-decoration: none
+        position: relative
+        display: inline-block
+        padding-left: 23px
+        &:before
+          +b_a
+          left: 0
+          top: 0
+          bottom: 0
+          margin: auto
+        &.a1
+          &:before
+            background: url(../img/icons/a1.svg)
+            width: 21px
+            height: 21px
+            left: -3px
+        &.mts
+          &:before
+            background:  url(../img/icons/mts.svg)
+            width: 15px
+            height: 14px
+        &.life
+          &:before
+            background:  url(../img/icons/life.svg)
+            width: 13px
+            height: 13px
+        &:hover
+          text-decoration: none
+          color: $green
+
+
+.footer_row2
+  +flex
+  +wrap
+  .col1
+    width: 40%
+    @media (max-width: 991px)
+      width: 100%
+    .info
+      font-size: 12px
+      line-height: 20px
+      margin-bottom: 20px
+    .f_menu
+      +flex
+      +ai-center
+      +wrap
+      margin-bottom: 20px
+      li
+        @media (max-width: 575px)
+          margin-bottom: 10px
+        &:first-child
+          margin-right: 35px
+        a
+          text-decoration: underline
+          color: $black
+          font-size: 14px
+          font-weight: 500
+          &:hover
+            text-decoration: none
+            color: $green
+    .rating
+      font-size: 12px
+      line-height: 14px
+      @media (max-width: 991px)
+        margin-bottom: 20px
+
+  .col2
+    width: 30%
+    @media (max-width: 991px)
+      width: 100%
+  .col3
+    width: 30%
+    @media (max-width: 991px)
+      width: 100%
+
+.f_title
+  font-size: 14px
+  margin-bottom: 13px
+  @media (max-width: 991px)
+    margin-bottom: 8px
+.socila_menu
+  +flex
+  +ai-center
+  @media (max-width: 991px)
+    margin-bottom: 20px
+  li
+    padding: 0 2px
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+    a
+      +flex
+      +ai-center
+      +j-center
+      width: 30px
+      height: 30px
+      +border-radius(50%)
+      background: #fff
+      &:hover
+        background: $green
+        svg
+          *
+            fill: #fff
+
+.pay_list
+  +flex
+  +ai-center
+  margin-bottom: 13px
+  li
+    &:first-child
+      margin-right: 20px
+
+.f_work
+  font-size: 12px
+  line-height: 14px
+  margin-bottom: 15px
+  strong
+    font-weight: 700
+
+.copyright
+  font-size: 14px
+  line-height: 16px
+
+
+.footer_nav
+  background: $violet
+  @media (max-width: 1200px)
+    padding: 10px 0
+  .container
+    +flex
+    +ai-center
+    +j-beetween
+    +wrap
+    ul
+      +flex
+      +ai-center
+      +wrap
+      @media (max-width: 991px)
+        width: 100%
+        margin-bottom: 20px
+      li
+        @media (max-width: 575px)
+          width: 100%
+        &:first-child
+          a
+            @media (min-width: 992px)
+              padding-left: 0
+        a
+          color: #fff
+          font-size: 14px
+          text-decoration: none
+          display: inline-block
+          padding: 15px 12px
+          @media (max-width: 1200px)
+            padding: 5px 10px
+          @media (max-width: 575px)
+            padding-left: 0
+          &:hover
+            text-decoration: none
+            color: $green
+    .copyright
+      color: #fff
+      font-weight: 300
+      font-size: 12px
+
+
+.dev
+  background: #542B65
+  min-height: 45px
+  +flex
+  +ai-center
+  +j-center
+  color: #fff
+  font-size: 12px
+  font-weight: 700
