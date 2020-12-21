@@ -178,6 +178,20 @@ $(document).ready(function(){
         $(this).parent().toggleClass('active');
     });
 
+    $('.product_item').each(function(){
+        var pr_item_slider=$(this).find('.product_item_img_slider');
+        $(pr_item_slider).slick({
+            infinite: true,
+            arrows: true,
+            dots: false,
+            //autoplay: true,
+            //speed: 3000,
+            //autoplaySpeed: 3000,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    });
+
 
 
 });
