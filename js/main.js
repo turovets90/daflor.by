@@ -173,6 +173,12 @@ $(document).ready(function(){
 
 
 
+    $('.sidebar_catalog .arrow').click(function(){
+        $(this).next().slideToggle();
+        $(this).parent().toggleClass('active');
+    });
+
+
 
 });
 
