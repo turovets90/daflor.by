@@ -1577,7 +1577,21 @@ h2, .h2, .section_title
   .slick-dots
     bottom: -15px
 
-
+.stars
+  +flex
+  +ai-center
+  span
+    +flex
+    width: 12px
+    height: 12px
+    + span
+      margin-left: 3px
+    &.star
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 10.0496L8.90991 11.8912C9.44281 12.2287 10.0949 11.7298 9.95468 11.0988L9.18337 7.63582L11.7567 5.3027C12.2265 4.87717 11.9741 4.07011 11.357 4.01875L7.97033 3.71794L6.64509 0.445713C6.40669 -0.148571 5.59331 -0.148571 5.35491 0.445713L4.02967 3.71061L0.642956 4.01142C0.025914 4.06278 -0.226512 4.86983 0.243281 5.29536L2.81663 7.62848L2.04532 11.0915C1.90509 11.7224 2.55719 12.2213 3.09009 11.8838L6 10.0496Z' fill='%23A0D053'/%3e%3c/svg%3e ")
+    &.star_half
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.309 4.0163L8.63304 3.70834L7.19762 0.445441C6.93939 -0.14848 6.05839 -0.14848 5.80016 0.445441L4.36473 3.71567L0.696416 4.0163C0.0280687 4.06763 -0.245346 4.87418 0.263509 5.29946L3.05082 7.63115L2.21539 11.092C2.06349 11.7226 2.76981 12.2212 3.34702 11.8839L6.49889 10.0508L9.65075 11.8913C10.228 12.2285 10.9343 11.7299 10.7824 11.0994L9.94695 7.63115L12.7343 5.29946C13.2431 4.87418 12.9773 4.06763 12.309 4.0163ZM6.49889 8.67968V1.86059L7.79761 4.82286L11.1242 5.10149L8.60266 7.21321L9.36215 10.3515L6.49889 8.67968Z' fill='%23A0D053'/%3e%3c/svg%3e ")
+    &.star_empty
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.3621 4.0163L7.96896 3.70834L6.64395 0.445441C6.40559 -0.14848 5.59236 -0.14848 5.35399 0.445441L4.02898 3.71567L0.642846 4.0163C0.0259096 4.06763 -0.226474 4.87418 0.243239 5.29946L2.81614 7.63115L2.04497 11.092C1.90476 11.7226 2.55675 12.2212 3.08956 11.8839L5.99897 10.0508L8.90839 11.8913C9.4412 12.2285 10.0932 11.7299 9.95297 11.0994L9.1818 7.63115L11.7547 5.29946C12.2244 4.87418 11.979 4.06763 11.3621 4.0163ZM5.99897 8.67968L3.36297 10.3441L4.06404 7.20587L1.73651 5.09416L4.80717 4.81553L5.99897 1.86059L7.19779 4.82286L10.2685 5.10149L7.94092 7.21321L8.64198 10.3515L5.99897 8.67968Z' fill='%23A0D053'/%3e%3c/svg%3e ")
 
 .steps
   background: $green
@@ -2867,3 +2881,205 @@ h1, .h1, .page_title
             height: 5px
             background: $violet
             +border-radius(50%)
+
+
+
+
+#reviewStars-input
+  input
+    &:checked
+      ~ label
+        background: url(../img/icons/star_empty.svg)
+        width: 12px
+        height: 12px
+#reviewStars-input
+  label
+    background: url(../img/icons/star_empty.svg)
+    width: 12px
+    height: 12px
+#reviewStars-input
+  label
+    &:hover
+      background: url(../img/icons/star_empty.svg)
+      width: 12px
+      height: 12px
+#reviewStars-input
+  label
+    &:hover
+      ~ label
+        background: url(../img/icons/star_empty.svg)
+        width: 12px
+        height: 12px
+#reviewStars-input
+  overflow: hidden
+  position: relative
+  float: left
+  //padding-top: 8px
+
+#reviewStars-input
+  input
+    &:checked
+      ~ label
+          background: url(../img/icons/star.svg)
+          width: 12px
+          height: 12px
+
+
+#reviewStars-input
+  input
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0)
+    opacity: 0
+    width: 0
+    //height: 20px
+    top: 0
+    z-index: 0
+
+
+#reviewStars-input
+  label
+    background-position: 0 0
+    width: 12px
+    height: 12px
+    float: right
+    cursor: pointer
+    position: relative
+    z-index: 1
+    margin-left: 4px
+    margin-bottom: 0
+
+
+.reviews_content
+  .share
+    top: 0
+.review_form
+  margin-top: 60px
+  @media (max-width: 767px)
+    margin-top: 30px
+  .title
+    text-align: center
+    font-size: 26px
+    font-weight: 500
+    text-transform: uppercase
+    margin-bottom: 10px
+    @media (max-width: 1200px)
+      font-size: 24px
+    @media (max-width: 767px)
+      font-size: 22px
+  .subtitle
+    font-size: 14px
+    margin-bottom: 25px
+    @media (max-width: 767px)
+      margin-bottom: 15px
+
+  .review_form_row
+    +flex
+    +wrap
+    .col1
+      max-width: 180px
+      margin-right: 25px
+      @media (max-width: 767px)
+        width: 100%
+        max-width: 100%
+        margin-right: 0
+    .col2
+      width: 486px
+      margin-right: 25px
+      @media (max-width: 767px)
+        width: 100%
+        max-width: 100%
+        margin-right: 0
+    .col3
+      +flex
+      +ai-end
+      padding-bottom: 15px
+      .flex
+        +flex
+        +ai-center
+        span
+          color: #777
+          font-size: 13px
+    .field
+      position: relative
+      display: inline-block
+      width: 100%
+      margin-bottom: 15px
+      textarea.form-control
+        height: 105px
+      .form-control
+        height: 45px
+        border: 1px solid $border_color
+        +border-radius(2px)
+        background: #fff
+        padding-left: 15px
+        &:focus
+          + label
+            display: none
+        + label
+          position: absolute
+          left: 15px
+          top: 15px
+          +flex
+          +ai-center
+          color: #777
+          font-size: 13px
+          pointer-events: none
+
+
+.red
+  color: $red
+
+
+
+.reviews_list
+  background: #fff
+  padding: 25px
+  @media (max-width: 767px)
+    padding: 15px
+  .review_item
+    border-bottom: 1px solid $border_color
+    padding: 20px 0
+    .review_head
+      +flex
+      +wrap
+      margin-bottom: 10px
+      .author
+        width: 70%
+        font-size: 16px
+        font-weight: 500
+        margin-bottom: 10px
+      .date
+        width: 30%
+        font-size: 12px
+        font-weight: 300
+        text-align: right
+    .review_body
+      font-weight: 300
+      font-size: 14px
+      line-height: 20px
+      @media (min-width: 1201px)
+        padding-right: 100px
+    .review_footer
+      padding-left: 75px
+      font-weight: 300
+      font-size: 14px
+      line-height: 20px
+      padding-top: 25px
+      +flex
+      @media (min-width: 1201px)
+        padding-right: 100px
+      @media (max-width: 1200px)
+        padding-left: 50px
+      @media (max-width: 767px)
+        padding-left: 30px
+      @media (max-width: 575px)
+        padding-left: 0
+        +wrap
+
+
+      .a_title
+        white-space: nowrap
+        font-weight: 500
+        margin-right: 15px
+        @media (max-width: 575px)
+          width: 100%
+          margin-bottom: 10px
