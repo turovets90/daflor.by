@@ -282,6 +282,32 @@ $(document).ready(function(){
     }
 
 
+
+    $('.product_img_slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        asNavFor: '.product_img_slider_nav'
+    });
+    $('.product_img_slider_nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.product_img_slider',
+        dots: false,
+        focusOnSelect: true,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
+
+
 });
 
 

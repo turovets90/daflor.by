@@ -525,6 +525,8 @@ strong
 .basket_link
   +flex
   +ai-center
+  &:hover
+    text-decoration: none
   .icon
     display: flex
     margin-right: 12px
@@ -1942,6 +1944,7 @@ footer
 .page_content
   background: #F2F3F4
   padding: 30px 0
+  overflow-x: hidden
 .sidebar_catalog
   @media (max-width: 1200px)
     display: none
@@ -2582,3 +2585,285 @@ h1, .h1, .page_title
   padding-bottom: 35px
   .h1
     text-align: center
+
+
+
+
+.product_row
+  .left
+    @media (min-width: 1201px)
+      -ms-flex: 0 0 44%
+      flex: 0 0 44%
+      max-width: 44%
+
+  .right
+    @media (min-width: 1201px)
+      -ms-flex: 0 0 56%
+      flex: 0 0 56%
+      max-width: 56%
+  .share
+    position: relative
+    top: 0
+    right: 0
+
+    margin-bottom: 30px
+.product_slider_box
+  background: #fff
+  border: 1px solid #E1E1E1
+  width: 100%
+  height: 400px
+  position: relative
+  margin-bottom: 20px
+  @media (max-width: 767px)
+    height: 300px
+
+  .label
+    position: absolute
+    left: 15px
+    top: 13px
+    width: 50px
+    height: 50px
+    +border-radius(50%)
+    +flex
+    +ai-center
+    +j-center
+    color: #fff
+    font-size: 13px
+    font-weight: 700
+    &:before
+      +b_a
+      width: 48px
+      height: 48px
+      +border-radius(50%)
+      border: 1px dashed #FFFFFF
+      +m_a
+
+  .product_img_slider
+    width: 100%
+    height: 400px
+    @media (max-width: 767px)
+      height: 300px
+
+
+    .slick-next
+      right: 8px
+    .slick-prev
+      left: 8px
+    .item
+      height: 400px
+      position: relative
+      @media (max-width: 767px)
+        height: 300px
+      img
+        position: absolute
+        right: 0
+        left: 0
+        bottom: 0
+        margin: auto
+        max-width: 99%
+        max-height: 99%
+
+
+.product_img_slider_nav
+  padding: 0 45px
+  margin-bottom: 30px
+  @media (max-width: 1200px)
+    padding: 0 35px
+  .slick-prev
+    left: 0
+  .slick-next
+    right: 0
+  .item
+    padding: 0 5px
+    text-align: center
+    &.slick-current
+      .img_box
+        border: 2px solid $green
+  .img_box
+    width: 91px
+    height: 96px
+    border: 1px solid #E1E1E1
+    position: relative
+    display: inline-block
+    img
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+      max-height: 99%
+      max-width: 99%
+
+
+.product_info
+  width: 100%
+  min-height: 400px
+  border: 1px solid $border_color
+  background: #fff
+  padding: 25px
+  margin-bottom: 20px
+  @media (max-width: 1200px)
+    padding: 15px
+  @media (max-width: 767px)
+    min-height: auto
+  .product_title
+    font-weight: 500
+    font-size: 24px
+    color: $black
+    font-family: $font
+  .size_box
+    margin-bottom: 30px
+    .item
+      +flex
+      +ai-center
+      margin-bottom: 13px
+      .radio
+        margin-right: 45px
+        input
+          position: absolute
+          opacity: 0
+          &:checked
+            + label
+              &:before
+                background: $green
+                border: 1px solid $green
+          + label
+            position: relative
+            font-size: 16px
+            padding-left: 25px
+            margin-bottom: 0
+            &:before
+              +b_a
+              left: 0
+              top: 0
+              bottom: 0
+              margin: auto
+              width: 15px
+              height: 15px
+              border: 1px solid #7D4096
+              +border-radius(50%)
+
+      .price_box
+        +flex
+        +ai-center
+        .old_price
+          font-size: 16px
+          font-weight: 300
+          color: #777
+          text-decoration: line-through
+          margin-right: 20px
+        .current_price
+          font-size: 16px
+  .amount_box
+    margin-bottom: 25px
+    > span
+      font-weight: 500
+      font-size: 14px
+      display: inline-block
+      margin-bottom: 13px
+  .amount
+    +flex
+    +ai-center
+    width: max-content
+    height: 35px
+    border: 1px solid #DEDEDE
+    +border-radius(3px)
+    overflow: hidden
+    span
+      width: 35px
+      height: 35px
+      +flex
+      +ai-center
+      +j-center
+      color:  #777777
+      cursor: pointer
+      font-size: 24px
+      font-weight: 500
+      &.down
+        border-right: 1px solid $border_color
+      &.up
+        border-left: 1px solid $border_color
+      &:hover
+        background: #6CA737
+        color: #fff
+    input
+      width: 35px
+      height: 33px
+      border: 0
+      background: none
+      text-align: center
+      color: #333333
+      font-size: 14px
+
+.product_row
+  margin-bottom: 35px
+  @media (max-width: 1200px)
+    margin-bottom: 30px
+  @media (max-width: 767px)
+    margin-bottom: 20px
+  .tags
+    margin-bottom: 25px
+
+    .tags_list
+      +flex
+      +wrap
+      li
+        padding: 2px
+        a
+          display: inline-block
+          border: 1px solid $violet
+          color: $violet
+          padding: 3px
+          text-decoration: none
+          &:hover
+            background: $green
+            color: #fff
+            border: 1px solid $green
+  .desc
+    font-size: 12px
+    font-weight: 300
+    margin-bottom: 20px
+    p
+      strong
+        font-size: 14px
+        font-weight: 500
+  .delivery_pay
+    .item
+      border: 1px solid $violet_light
+      background: $violet_light
+      padding: 15px
+      font-size: 12px
+      font-weight: 300
+      line-height: 20px
+      margin-bottom: 10px
+      .title
+        +flex
+        +ai-center
+        margin-bottom: 10px
+        picture
+          width: 30px
+          min-width: 30px
+          height: 30px
+          background: #fff
+          +border-radius(50%)
+          +flex
+          +ai-center
+          +j-center
+          margin-right: 15px
+        span
+          font-size: 14px
+          font-weight: 500
+      ul
+        li
+          position: relative
+          padding-left: 15px
+          &:before
+            +b_a
+            left: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            width: 5px
+            height: 5px
+            background: $violet
+            +border-radius(50%)
