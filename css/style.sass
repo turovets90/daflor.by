@@ -171,6 +171,7 @@ body
   font-size: 14px
   line-height: 1.2
   font-family: $font
+  background: #f2f3f4
 
 
 strong
@@ -400,6 +401,7 @@ strong
         width: 30px
         height: 30px
       img
+
         @media (max-width: 767px)
           position: absolute
           +m_a
@@ -423,6 +425,8 @@ strong
           width: 30px
           height: 30px
         img
+          @media (min-width: 768px)
+            display: none
           @media (max-width: 767px)
             position: absolute
             +m_a
@@ -525,6 +529,7 @@ strong
 .basket_link
   +flex
   +ai-center
+  text-decoration: none
   &:hover
     text-decoration: none
   .icon
@@ -1340,85 +1345,7 @@ h2, .h2, .section_title
 .news
   background: #F2F3F4
 
-.news_list
-  .news_item
-    +transition($transition_default)
-    margin-bottom: 30px
-    @media (max-width: 1200px)
-      +box-shadow(1px 2px 25px rgba(0, 0, 0, 0.07))
-    @media (min-width: 1201px)
-      &:hover
-        position: relative
-        z-index: 2
-        +box-shadow(1px 2px 25px rgba(0, 0, 0, 0.07))
-        .news_item_body
-          background: #fff
-          padding: 22px 30px
-          .desc
-            opacity: 1
-          .btn_default
-            opacity: 1
-    .news_item_img
-      +flex
-      width: 100%
-      height: 225px
-      background-size: cover
-      background-position: center
-      @media (max-width: 575px)
-        height: 180px
-    .news_item_body
-      padding: 22px 0
-      +transition($transition_default)
-      min-height: 265px
-      @media (max-width: 1200px)
-        min-height: auto
-        background: #fff
-        padding: 22px 30px
-      @media (max-width: 575px)
-        padding: 15px
 
-
-
-      .date
-        font-size: 14px
-        font-weight: 300
-        line-height: 22px
-        margin-bottom: 10px
-
-      .news_item_name
-        display: inline-block
-        color: $black
-        font-size: 16px
-        font-weight: 500
-        line-height: 19px
-        text-decoration: none
-        margin-bottom: 15px
-        display: -webkit-box
-        overflow: hidden
-        text-overflow: ellipsis
-        -webkit-line-clamp: 2
-        max-height: 38px
-        &:hover
-          text-decoration: none
-          color: $green
-      .desc
-        font-size: 14px
-        font-weight: 300
-        line-height: 22px
-        margin-bottom: 25px
-        display: -webkit-box
-        overflow: hidden
-        text-overflow: ellipsis
-        -webkit-line-clamp: 3
-        max-height: 67px
-        @media (min-width: 1201px)
-          +transition($transition_default)
-          opacity: 0
-      .btn_default
-        margin: auto
-        @media (min-width: 1201px)
-          opacity: 0
-          +transition($transition_default)
 .why_choose_us
   background: $green
   color: #fff
@@ -2065,7 +1992,7 @@ h1, .h1, .page_title
     @media (min-width: 1201px)
       position: absolute
       right: 15px
-      top: 25px
+      top: 0
     span
       color: $black
       font-weight: 300
@@ -3083,3 +3010,684 @@ h1, .h1, .page_title
         @media (max-width: 575px)
           width: 100%
           margin-bottom: 10px
+
+.news_list
+  .news_item
+    +transition($transition_default)
+    margin-bottom: 30px
+    @media (max-width: 1200px)
+      +box-shadow(1px 2px 25px rgba(0, 0, 0, 0.07))
+    @media (min-width: 1201px)
+      &:hover
+        position: relative
+        z-index: 2
+        +box-shadow(1px 2px 25px rgba(0, 0, 0, 0.07))
+        .news_item_body
+          background: #fff
+          padding: 22px 30px
+          .desc
+            opacity: 1
+          .btn_default
+            opacity: 1
+    .news_item_img
+      +flex
+      width: 100%
+      height: 225px
+      background-size: cover
+      background-position: center
+      @media (max-width: 575px)
+        height: 180px
+    .news_item_body
+      padding: 22px 0
+      +transition($transition_default)
+      min-height: 265px
+      @media (max-width: 1200px)
+        min-height: auto
+        background: #fff
+        padding: 22px 30px
+      @media (max-width: 575px)
+        padding: 15px
+
+
+
+      .date
+        font-size: 14px
+        font-weight: 300
+        line-height: 22px
+        margin-bottom: 10px
+
+      .news_item_name
+        display: inline-block
+        color: $black
+        font-size: 16px
+        font-weight: 500
+        line-height: 19px
+        text-decoration: none
+        margin-bottom: 15px
+        display: -webkit-box
+        overflow: hidden
+        text-overflow: ellipsis
+        -webkit-line-clamp: 2
+        max-height: 38px
+        &:hover
+          text-decoration: none
+          color: $green
+      .desc
+        font-size: 14px
+        font-weight: 300
+        line-height: 22px
+        margin-bottom: 25px
+        display: -webkit-box
+        overflow: hidden
+        text-overflow: ellipsis
+        -webkit-line-clamp: 3
+        max-height: 67px
+        @media (min-width: 1201px)
+          +transition($transition_default)
+          opacity: 0
+      .btn_default
+        margin: auto
+        @media (min-width: 1201px)
+          opacity: 0
+          +transition($transition_default)
+.page_content
+  .news_list
+
+  .news_item
+
+    +transition($transition_default)
+    margin-bottom: 30px
+    @media (min-width: 1201px)
+      height: 340px
+      position: relative
+      .news_item_content
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+    @media (max-width: 1200px)
+      +box-shadow(1px 2px 25px rgba(0, 0, 0, 0.07))
+    @media (min-width: 1201px)
+      &:hover
+        position: relative
+        z-index: 2
+        +box-shadow(1px 2px 25px rgba(0, 0, 0, 0.07))
+        .news_item_body
+          background: #fff
+          padding: 8px 15px 20px
+          .desc
+            opacity: 1
+          .btn_default
+            opacity: 1
+    .news_item_img
+      +flex
+      width: 100%
+      height: 185px
+      background-size: cover
+      background-position: center
+      @media (max-width: 575px)
+        height: 170px
+    .news_item_body
+      padding: 8px 0 20px
+      +transition($transition_default)
+      min-height: auto
+
+      @media (max-width: 1200px)
+        min-height: auto
+        background: #fff
+        padding: 8px 15px
+
+      .date
+        font-size: 14px
+        font-weight: 300
+        line-height: 22px
+        margin-bottom: 5px
+
+      .news_item_name
+        display: inline-block
+        color: $black
+        font-size: 16px
+        font-weight: 500
+        line-height: 19px
+        text-decoration: none
+        margin-bottom: 8px
+        display: -webkit-box
+        overflow: hidden
+        text-overflow: ellipsis
+        -webkit-line-clamp: 2
+        max-height: 38px
+        &:hover
+          text-decoration: none
+          color: $green
+      .desc
+        font-size: 14px
+        font-weight: 300
+        line-height: 22px
+        margin-bottom: 20px
+        display: -webkit-box
+        overflow: hidden
+        text-overflow: ellipsis
+        -webkit-line-clamp: 3
+        max-height: 67px
+        opacity: 1
+      .btn_default
+        margin: 0
+        @media (min-width: 1201px)
+          opacity: 0
+          +transition($transition_default)
+
+.phones
+  li
+    margin-bottom: 10px
+    a
+      color: $black
+      font-size: 16px
+      font-weight: 500
+      text-decoration: none
+      position: relative
+      display: inline-block
+      padding-left: 23px
+      white-space: nowrap
+      &:before
+        +b_a
+        left: 0
+        top: 0
+        bottom: 0
+        margin: auto
+      &.a1
+        &:before
+          background: url(../img/icons/a1.svg)
+          width: 21px
+          height: 21px
+          left: -3px
+      &.mts
+        &:before
+          background:  url(../img/icons/mts.svg)
+          width: 15px
+          height: 14px
+      &.life
+        &:before
+          background:  url(../img/icons/life.svg)
+          width: 13px
+          height: 13px
+      &:hover
+        text-decoration: none
+        color: $green
+
+
+.shop_list
+  background: #fff
+  padding: 0 25px
+
+
+  .shop_item
+    border-bottom: 1px solid #E1E1E1
+    padding: 15px 0
+    &:last-child
+      border-bottom: 0
+    .title
+      font-weight: 500
+      font-size: 16px
+      margin-bottom: 20px
+      @media (max-width: 767px)
+        margin-bottom: 10px
+    .shop_row
+      > div
+        @media (min-width: 1201px)
+          &:nth-child(1)
+            -ms-flex: 0 0 29%
+            flex: 0 0 29%
+            max-width: 29%
+          &:nth-child(2)
+            -ms-flex: 0 0 29%
+            flex: 0 0 29%
+            max-width: 29%
+          &:nth-child(3)
+            -ms-flex: 0 0 24%
+            flex: 0 0 24%
+            max-width: 24%
+          &:nth-child(4)
+            -ms-flex: 0 0 18%
+            flex: 0 0 18%
+            max-width: 18%
+        @media (max-width: 767px)
+          margin-bottom: 20px
+
+    .email
+      color: $black
+      text-decoration: none
+      &:hover
+        text-decoration: none
+        color: $green
+
+h3, .h3
+  font-size: 26px
+  margin:  30px 0
+  @media (max-width: 1200px)
+    font-size: 24px
+  @media (max-width: 767px)
+    font-size: 22px
+  @media (max-width: 575px)
+    font-size: 20px
+
+
+.shop_info
+  .shop_info_item
+    border: 1px solid #E1E1E1
+    background: #fff
+    margin-bottom: 25px
+    +flex
+    +wrap
+    &:last-child
+      margin-bottom: 0
+    .text
+      width: calc(100% - 383px)
+      padding: 20px 25px 10px
+      @media (max-width: 991px)
+        width: 100%
+        padding: 15px
+      .bottom_info
+        padding-top: 30px
+        > p
+          font-size: 14px
+          font-weight: 300
+        strong
+          font-weight: 500
+          font-size: 14px
+          margin-bottom: 10px
+          display: block
+      .top_info
+        border-bottom: 1px solid #E1E1E1
+        font-size: 14px
+        padding-bottom: 30px
+        .title
+          font-size: 16px
+          font-weight: 500
+          margin-bottom: 18px
+        .location
+          display: inline-block
+          position: relative
+          padding-left: 15px
+          text-decoration: underline
+          color: $black
+          &:hover
+            color: $green
+            text-decoration: none
+          &:before
+            +b_a
+            left: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            width: 9px
+            height: 12px
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='12' viewBox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.5 0C2.01214 0 0 1.878 0 4.2C0 7.35 4.5 12 4.5 12C4.5 12 9 7.35 9 4.2C9 1.878 6.98786 0 4.5 0ZM4.5 5.7C3.61286 5.7 2.89286 5.028 2.89286 4.2C2.89286 3.372 3.61286 2.7 4.5 2.7C5.38714 2.7 6.10714 3.372 6.10714 4.2C6.10714 5.028 5.38714 5.7 4.5 5.7Z' fill='%23A0D053'/%3e%3c/svg%3e ")
+
+
+    .map
+      width: 383px
+      min-height: 280px
+      @media (max-width: 991px)
+        width: 100%
+
+.modal-open, .modal
+  padding-right:  0 !important
+
+.modal
+  .modal-body
+    padding: 0
+  .modal-content
+    +border-radius(0)
+    border: 0
+    +box-shadow(1px 0px 45px rgba(0, 0, 0, 0.15))
+  .modal-dialog
+    @media (min-width: 791px)
+      max-width: 790px
+.modal_product_content
+  padding: 25px
+  +flex
+  +wrap
+  @media (max-width: 790px)
+    padding: 15px
+  picture
+    width: 280px
+    position: relative
+    +flex
+    +ai-center
+    +j-center
+    @media (max-width: 790px)
+      width: 100%
+
+  .pr_info
+    width: calc(100% - 280px)
+    padding: 20px 0 20px 15px
+    @media (max-width: 790px)
+      width: 100%
+      padding: 10px 0 0
+    .title
+      border-bottom: 1px solid $border_color
+      font-size: 22px
+      font-weight: 500
+      padding-bottom: 22px
+      margin-bottom: 22px
+      @media (max-width: 790px)
+        font-size: 18px
+        padding-bottom: 15px
+        margin-bottom: 15px
+    .pr_name
+      font-weight: 700
+      font-size: 16px
+      margin-bottom: 22px
+
+    .d_flex
+      +flex
+      +ai-end
+      @media (max-width: 790px)
+        +wrap
+      .price
+        font-size: 24px
+        font-weight: 700
+        margin-right: 30px
+        @media (max-width: 790px)
+          width: 100%
+          margin-bottom: 10px
+
+
+
+    .amount_box
+      margin-right: 25px
+      @media (max-width: 790px)
+        width: 100%
+        margin-bottom: 10px
+
+      > span
+        font-weight: 500
+        font-size: 14px
+        display: inline-block
+        margin-bottom: 13px
+    .amount
+      +flex
+      +ai-center
+      width: max-content
+      height: 35px
+      border: 1px solid #DEDEDE
+      +border-radius(3px)
+      overflow: hidden
+      span
+        width: 35px
+        height: 35px
+        +flex
+        +ai-center
+        +j-center
+        color:  #777777
+        cursor: pointer
+        font-size: 24px
+        font-weight: 500
+        &.down
+          border-right: 1px solid $border_color
+        &.up
+          border-left: 1px solid $border_color
+        &:hover
+          background: #6CA737
+          color: #fff
+      input
+        width: 35px
+        height: 33px
+        border: 0
+        background: none
+        text-align: center
+        color: #333333
+        font-size: 14px
+
+    .size_box
+      margin-bottom: 30px
+      .item
+        +flex
+        +ai-center
+        margin-bottom: 13px
+        .radio
+          margin-right: 45px
+          @media (max-width: 767px)
+            margin-right: 20px
+          input
+            position: absolute
+            opacity: 0
+            &:checked
+              + label
+                &:before
+                  background: $green
+                  border: 1px solid $green
+            + label
+              position: relative
+              font-size: 16px
+              padding-left: 25px
+              margin-bottom: 0
+              &:before
+                +b_a
+                left: 0
+                top: 0
+                bottom: 0
+                margin: auto
+                width: 15px
+                height: 15px
+                border: 1px solid #7D4096
+                +border-radius(50%)
+
+        .price_box
+          +flex
+          +ai-center
+          .old_price
+            font-size: 16px
+            font-weight: 300
+            color: #777
+            text-decoration: line-through
+            margin-right: 20px
+            @media (max-width: 767px)
+              margin-right: 15px
+          .current_price
+            font-size: 16px
+#add_to_basket
+  .modal-dialog
+    @media (min-width: 576px)
+      max-width: 383px
+  .close
+    position: absolute
+    right: 20px
+    top: 20px
+    width: 20px
+    height: 20px
+    opacity: 1
+    &:before
+      +b_a
+      +m_a
+      width: 17px
+      height: 17px
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 16L16 1' stroke='%23C4C4C4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M1 0.999999L16 16' stroke='%23C4C4C4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+
+
+
+.add_to_basket_modal_content
+  text-align: center
+  padding: 20px 0 0
+  picture
+    +flex
+    +ai-center
+    +j-center
+    width: 100%
+    height: 180px
+    margin-bottom: 15px
+
+    img
+      max-height: 180px
+  .product_name
+    font-size: 16px
+    margin-bottom: 20px
+    display: inline-block
+  .add_to_basket_modal_content_footer
+    padding: 25px
+    +box-shadow(1px 2px 25px rgba(0, 0, 0, 0.1))
+    .check
+      position: relative
+      padding-left: 30px
+      display: inline-block
+      font-weight: 500
+      font-size: 16px
+      margin-bottom: 25px
+      &:before
+        +b_a
+        left: 0
+        top: 0
+        bottom: 0
+        width: 20px
+        height: 16px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 6.84211L8.09375 13L18 2' stroke='%23A0D053' stroke-width='3.5'/%3e%3c/svg%3e ")
+    .btn_default
+      margin: auto
+      max-width: 230px
+      &.first
+        margin-bottom: 10px
+        border: 2px solid $green
+        color: $green
+        background: #fff
+        +box-shadow(none)
+        &:hover
+          background: $green
+          color: #fff
+
+.modal-body
+  &.ai_center
+    min-height: 395px
+    background-size: cover
+    background-position: center
+    +flex
+    +ai-center
+    padding: 60px
+    position: relative
+    @media (max-width: 1200px)
+      padding: 50px 30px
+    @media (max-width: 767px)
+      padding: 30px
+    &:before
+      +b_a
+      border: 2px solid $violet
+      top: 15px
+      right: 15px
+      bottom: 15px
+      left: 15px
+      pointer-events: none
+    .close
+      width: 40px
+      height: 40px
+      background: $violet
+      position: absolute
+      right: -10px
+      top: -10px
+      opacity: 1
+      &:hover
+        opacity: 1
+      &:before
+        +b_a
+        +m_a
+        width: 17px
+        height: 17px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 16L16 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M1 0.999999L16 16' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+
+    .h1
+      @media (min-width: 1201px)
+        font-size: 42px
+      @media (max-width: 1200px)
+        margin-bottom: 30px
+      @media (max-width: 767px)
+        margin-bottom: 20px
+    .subtitle
+      text-align: left
+      font-size: 20px
+      margin-bottom: 10px
+      line-height: 30px
+      @media (max-width: 1200px)
+        font-size: 18px
+        line-height: 1.2
+      @media (max-width: 767px)
+        font-size: 16px
+    p
+      font-size: 16px
+      margin-bottom: 25px
+
+    .phone
+      a
+        color: $green
+
+    form
+      &.d_flex
+        +flex
+        +ai-center
+        +wrap
+        .btn_default
+          max-width: 100%
+        .form-control
+          width: 221px
+          margin-right: 15px
+          border: 1px solid #E1E1E1
+          height: 45px
+          +border-radius(0)
+          @media (max-width: 1200px)
+            height: 40px
+          @media (max-width: 767px)
+            height: 35px
+            width: 100%
+            margin: 0 0 10px
+          &::-webkit-input-placeholder
+            color: #777777
+            font-size: 13px
+          &::-moz-placeholder
+            color: #777777
+            font-size: 13px
+          &::-ms-input-placeholder
+            color: #777777
+            font-size: 13px
+          &:-moz-placeholder
+            color: #777777
+            font-size: 13px
+          &:-ms-input-placeholder
+            color: #777777
+            font-size: 13px
+    .help_form
+      max-width: 338px
+      .btn_default
+        max-width: 100%
+      small
+        font-size: 10px
+        font-weight: 300
+        line-height: 12px
+    .field
+      position: relative
+      display: inline-block
+      width: 100%
+      margin-bottom: 15px
+
+      .form-control
+        height: 45px
+        border: 1px solid $border_color
+        +border-radius(2px)
+        background: #fff
+        padding-left: 15px
+        @media (max-width: 1200px)
+          height: 40px
+        @media (max-width: 767px)
+          height: 35px
+        &:focus
+          + label
+            display: none
+        + label
+          position: absolute
+          left: 15px
+          top: 0
+          bottom: 0
+          margin: auto
+          +flex
+          +ai-center
+          color: #777
+          font-size: 13px
+          pointer-events: none
