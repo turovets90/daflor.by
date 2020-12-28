@@ -2191,32 +2191,113 @@ h1, .h1, .page_title
       .filter_sort
         @media (max-width: 767px)
           width: 100%
-        .select
-          display: inline-block
-          position: relative
-          @media (max-width: 767px)
-            width: 100%
-          &:before
-            +b_a
-            right: 0
-            top: 0
-            bottom: 0
-            margin: auto
-            width: 12px
-            height: 7px
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 1L6 6L1 1' stroke='%23777777' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
 
-          select
-            appearance: none
-            -webkit-appearance: none
+
+
+        .dropdown
+          &.show
+            button
+              background: none
+              color: $black
+              &:before
+                +transform(rotate(-180deg))
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 1L6 6L1 1' stroke='%23777777' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+              .icon
+
+                &:before
+                  width: 9px
+                  height: 9px
+                  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='9' viewBox='0 0 9 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L7.36396 7.36396' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M7.36426 1L1.0003 7.36396' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+          button
+            position: relative
+            width: 100%
+            height: auto
+            +flex
+            +ai-center
             border: 0
             background: none
+            +border-radius(2px)
+            color: $black
             font-size: 16px
-            padding-right: 25px
-            @media (max-width: 767px)
+            padding-right: 40px
+            &#dropdownMenu3
+              &:before
+                display: none
+            &:before
+              +b_a
+              right: 0
+              top: 0
+              bottom: 0
+              margin: auto
+              width: 12px
+              height: 7px
+              background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 1L6 6L1 1' stroke='%23777777' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+              +transition($transition_default)
+            &:after
+              display: none
+
+          .dropdown-menu
+            width: 100%
+            +box-shadow(1px 0px 45px rgba(0, 0, 0, 0.15))
+            border: 1px solid #D9D9D9
+            padding: 15px
+            margin-top: 5px
+            .checkbox
+              position: relative
+              display: inline-block
               width: 100%
-            option
-              font-size: 16px
+              input
+                position: absolute
+                opacity: 0
+                &:checked
+                  + label
+                    &:after
+                      opacity: 1
+                    &:before
+                      background: $green
+                      border: 1px solid $green
+                + label
+                  margin-bottom: 0
+                  position: relative
+                  padding-left: 25px
+                  font-size: 13px
+                  &:after
+                    +b_a
+                    left: 3px
+                    top: 0
+                    bottom: 0
+                    margin: auto
+                    width: 11px
+                    height: 7px
+                    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 2.66667L4.6 6L10 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+                    opacity: 0
+
+                  &:before
+                    +b_a
+                    left: 0
+                    top: 0
+                    bottom: 0
+                    margin: auto
+                    border: 1px solid #D9D9D9
+                    width: 17px
+                    height: 17px
+                    +border-radius(2px)
+
+            ul
+              margin: 0
+              li
+                margin-bottom: 17px
+                font-size: 13px
+                &:last-child
+                  margin-bottom: 0
+                span
+                  width: 100%
+                  font-size: 13px
+                  cursor: pointer
+                  +transition($transition_default)
+                  &:hover
+                    color: $green
   .filter_body
     display: none
     padding: 10px 0
