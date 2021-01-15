@@ -121,7 +121,7 @@ $green:  #A0D053
 $violet_light: #E6E1EB
 $red: #CA2270
 $border_color: #D5D5D6
-$green_hover: #6CA737
+$green_hover: #2f6400
 $violet_hover: #6C3284
 
 a, button
@@ -477,7 +477,7 @@ strong
   height: 45px
   width: 100%
   max-width: 180px
-  background: #6ca737
+  background: $green
   color: #fff
   +box-shadow(1px 2px 17px rgba(138, 177, 74, 0.55))
   padding: 10px
@@ -491,7 +491,7 @@ strong
   @media (max-width: 767px)
     height: 35px
   &:hover
-    background: #4c9600
+    background: #2f6400
     text-decoration: none
     color: #fff
   &:focus
@@ -507,13 +507,14 @@ strong
     color: $green
     font-size: 13px
     &:hover, &:focus
-      background: $green
+      border: 2px solid $green_hover
+      background: $green_hover
       color: #fff
   &.add_to_basket
     font-size: 13px
-    background: #6ca737
+    background: $green
     &:hover
-      background: #4c9600
+      background: $green_hover
     span
       display: inline-block
       position: relative
@@ -735,7 +736,7 @@ strong
                 font-weight: 500
                 text-decoration: none
                 &:hover
-                  color: $green
+                  color: $green_hover
               ul
                 padding: 16px 0
                 @media (max-width: 1200px)
@@ -752,7 +753,7 @@ strong
                     font-size: 14px
                     text-decoration: none
                     &:hover
-                      color: $green
+                      color: $green_hover
       + li
         @media (min-width: 1201px)
           border-left: 1px dashed rgba(255, 255, 255, 0.35)
@@ -991,7 +992,7 @@ strong
         min-height: 27px
         margin-bottom: 15px
         &:hover
-          color: $green
+          color: $green_hover
       .product_item_price-amount
         +flex
         +ai-center
@@ -1033,7 +1034,7 @@ strong
             &.up
               border-left: 1px solid $border_color
             &:hover
-              background: $green
+              background: $green_hover
               color: #fff
           input
             width: 30px
@@ -1082,7 +1083,7 @@ h2, .h2, .section_title
     z-index: 4
     +transition($transition_default)
     &:hover
-      background:  #6CA737
+      background:  $green_hover
     &:focus
       background: $violet
     &:before
@@ -1410,7 +1411,7 @@ h2, .h2, .section_title
     z-index: 4
     +transition($transition_default)
     &:hover
-      background:  #6CA737
+      background:  $green_hover
     &:focus
       background: $violet
     &:before
@@ -1581,10 +1582,10 @@ h2, .h2, .section_title
 .seotext
   background: #F2F3F4
   padding: 30px 0 10px
-  font-size: 12px
-  line-height: 16px
+  font-size: 16px
+  line-height: 1.2
   h3, .h3
-    font-size: 14px
+    font-size: 18px
     text-transform: uppercase
     margin-bottom: 16px
     margin-top: 0
@@ -1661,7 +1662,7 @@ footer
             padding: 3px 0
           &:hover
             text-decoration: none
-            color: $green
+            color: $green_hover
 
   .footer_contacts
     width: 19%
@@ -1701,7 +1702,7 @@ footer
             height: 13px
         &:hover
           text-decoration: none
-          color: $green
+          color: $green_hover
 
 
 .footer_row2
@@ -1732,7 +1733,7 @@ footer
           font-weight: 500
           &:hover
             text-decoration: none
-            color: $green
+            color: $green_hover
     .rating
       font-size: 12px
       line-height: 14px
@@ -1773,7 +1774,7 @@ footer
       +border-radius(50%)
       background: #fff
       &:hover
-        background: $green
+        background: $green_hover
         svg
           *
             fill: #fff
@@ -1833,7 +1834,7 @@ footer
             padding-left: 0
           &:hover
             text-decoration: none
-            color: $green
+            color: $green_hover
     .copyright
       color: #fff
       font-weight: 300
@@ -1932,7 +1933,7 @@ footer
       padding: 12px 50px 12px 25px
       text-decoration: none
       &:hover
-        background: $green
+        background: $green_hover
     .submenu_container
       display: none
       padding: 10px 0 10px 25px
@@ -1957,7 +1958,7 @@ footer
           width: 100%
           padding: 8px 50px 8px 0
           &:hover
-            color: $green
+            color: $green_hover
         ul
           display: none
           li
@@ -1967,7 +1968,7 @@ footer
               font-weight: 300
               text-decoration: none
               &:hover
-                color: $green
+                color: $green_hover
 
 .page_title
   @media (min-width: 1201px)
@@ -2027,7 +2028,7 @@ h1, .h1, .page_title
             *
               +transition($transition_default)
           &:hover
-            border: 1px solid $green
+            border: 1px solid $green_hover
             svg
               *
                 fill: $green
@@ -2085,13 +2086,13 @@ h1, .h1, .page_title
         font-size: 16px
         &:hover, &.active
           text-decoration: none
-          background: $green
+          background: $green_hover
           color: #fff
         &.page_prev, &.page_next
           position: relative
           border: 1px solid #D5D5D6
           &:hover
-            border: 1px solid $green
+            border: 1px solid $green_hover
           &:before
             +b_a
             +m_a
@@ -2302,7 +2303,7 @@ h1, .h1, .page_title
                   cursor: pointer
                   +transition($transition_default)
                   &:hover
-                    color: $green
+                    color: $green_hover
   .filter_body
     display: none
     padding: 10px 0
@@ -2468,7 +2469,7 @@ h1, .h1, .page_title
                 cursor: pointer
                 +transition($transition_default)
                 &:hover
-                  color: $green
+                  color: $green_hover
 
 .range_values
   .range_row
@@ -2537,7 +2538,7 @@ h1, .h1, .page_title
         text-decoration: none
         &:hover
           text-decoration: underline
-          color: $green
+          color: $green_hover
 
       &:before
         +b_a
@@ -2813,7 +2814,7 @@ h1, .h1, .page_title
       &.up
         border-left: 1px solid $border_color
       &:hover
-        background: #6CA737
+        background: $green_hover
         color: #fff
     input
       width: 35px
@@ -2845,12 +2846,12 @@ h1, .h1, .page_title
           padding: 3px
           text-decoration: none
           &:hover
-            background: $green
+            background: $green_hover
             color: #fff
-            border: 1px solid $green
+            border: 1px solid $green_hover
   .desc
-    font-size: 12px
-    font-weight: 300
+    font-size: 14px
+    font-weight: 400
     margin-bottom: 20px
     p
       strong
@@ -3127,7 +3128,7 @@ h1, .h1, .page_title
       @media (max-width: 575px)
         height: 180px
     .news_item_body
-      padding: 22px 0
+      padding: 22px 30px
       +transition($transition_default)
       min-height: 265px
       @media (max-width: 1200px)
@@ -3160,7 +3161,7 @@ h1, .h1, .page_title
         max-height: 38px
         &:hover
           text-decoration: none
-          color: $green
+          color: $green_hover
       .desc
         font-size: 14px
         font-weight: 300
@@ -3217,7 +3218,7 @@ h1, .h1, .page_title
       @media (max-width: 575px)
         height: 170px
     .news_item_body
-      padding: 8px 0 20px
+      padding: 8px 15px 20px
       +transition($transition_default)
       min-height: auto
 
@@ -3247,7 +3248,7 @@ h1, .h1, .page_title
         max-height: 38px
         &:hover
           text-decoration: none
-          color: $green
+          color: $green_hover
       .desc
         font-size: 14px
         font-weight: 300
@@ -3301,7 +3302,7 @@ h1, .h1, .page_title
           height: 13px
       &:hover
         text-decoration: none
-        color: $green
+        color: $green_hover
 
 
 .shop_list
@@ -3347,7 +3348,7 @@ h1, .h1, .page_title
       text-decoration: none
       &:hover
         text-decoration: none
-        color: $green
+        color: $green_hover
 
 h3, .h3
   font-size: 26px
@@ -3400,7 +3401,7 @@ h3, .h3
           text-decoration: underline
           color: $black
           &:hover
-            color: $green
+            color: $green_hover
             text-decoration: none
           &:before
             +b_a
@@ -3517,7 +3518,7 @@ h3, .h3
         &.up
           border-left: 1px solid $border_color
         &:hover
-          background: #6CA737
+          background: $green_hover
           color: #fff
       input
         width: 35px
@@ -3641,7 +3642,7 @@ h3, .h3
         background: #fff
         +box-shadow(none)
         &:hover
-          background: $green
+          background: $green_hover
           color: #fff
 
 .modal-body
