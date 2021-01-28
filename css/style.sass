@@ -117,11 +117,11 @@ $Magnolia: 'Magnolia-Script'
 
 $black: #323232
 $violet: #7D4096
-$green:  #A0D053
+$green:  #a0d053
 $violet_light: #E6E1EB
 $red: #CA2270
 $border_color: #D5D5D6
-$green_hover: #2f6400
+$green_hover: #6F903B
 $violet_hover: #6C3284
 
 a, button
@@ -491,7 +491,7 @@ strong
   @media (max-width: 767px)
     height: 35px
   &:hover
-    background: #2f6400
+    background: $green_hover
     text-decoration: none
     color: #fff
   &:focus
@@ -647,6 +647,9 @@ strong
     +flex
     +wrap
     > li
+      @media (min-width: 1201px)
+        &:hover
+          background: #A25FBD
       .arrow
         position: absolute
         right: 0
@@ -2968,7 +2971,7 @@ h1, .h1, .page_title
   .share
     top: 0
 .review_form
-  margin-top: 60px
+  margin-top: 30px
   @media (max-width: 767px)
     margin-top: 30px
   .title
