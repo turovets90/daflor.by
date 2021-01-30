@@ -479,7 +479,6 @@ strong
   max-width: 180px
   background: $green
   color: #fff
-  +box-shadow(1px 2px 17px rgba(138, 177, 74, 0.55))
   padding: 10px
   font-size: 14px
   font-weight: 500
@@ -3786,3 +3785,51 @@ h3, .h3
           color: #777
           font-size: 13px
           pointer-events: none
+
+
+
+.nice_review
+  background: url(../img/thumb-up.png)
+  height: 26px
+  background-size: 25px
+  background-repeat: no-repeat
+  width: 25px
+  display: inline-block
+  margin-right: 5px
+  cursor: pointer
+  &.active
+    background: url(../img/thumb-up-solid.png)
+    height: 26px
+    background-size: 25px
+    background-repeat: no-repeat
+    width: 25px
+    display: inline-block
+    margin-right: 5px
+
+
+.bad_review
+  background: url(../img/thumb-down.png)
+  height: 26px
+  background-size: 25px
+  background-repeat: no-repeat
+  width: 25px
+  display: inline-block
+  cursor: pointer
+  &.active
+    background: url(../img/thumb-down-solid.png)
+    height: 26px
+    background-size: 26px
+    background-repeat: no-repeat
+    width: 26px
+    display: inline-block
+    margin-right: 5px
+
+.attitude
+  input
+    display: none
+
+
+.review_form_row
+  .flex
+    > span
+      margin-right: 10px

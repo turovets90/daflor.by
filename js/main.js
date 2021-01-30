@@ -328,6 +328,16 @@ $(document).ready(function(){
     });
 
 
+    $('.attitude div').click(function(){
+        $('.attitude div').removeClass('active');
+        $(this).addClass('active');
+        if($(this).hasClass('nice_review'))
+            $('.attitude input').val('1');
+        else
+            $('.attitude input').val('0');
+    });
+
+
 
 });
 
