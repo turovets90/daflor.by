@@ -1087,7 +1087,7 @@ h2, .h2, .section_title
     background: #A0D053
     +box-shadow( 1px 4px 25px rgba(0, 0, 0, 0.1))
     z-index: 4
-    +transition($transition_default)
+
     &:hover
       background:  $green_hover
     &:focus
@@ -1290,8 +1290,10 @@ h2, .h2, .section_title
 
 
 .inst_list
-  .inst_item
+  > div
     margin-bottom: 30px
+  .inst_item
+
     .inst_item_img
       height: 225px
       width: 100%
@@ -1415,7 +1417,7 @@ h2, .h2, .section_title
     background: #A0D053
     +box-shadow( 1px 4px 25px rgba(0, 0, 0, 0.1))
     z-index: 4
-    +transition($transition_default)
+
     &:hover
       background:  $green_hover
     &:focus
@@ -1454,7 +1456,9 @@ h2, .h2, .section_title
       right: 0
       bottom: 0
 
-
+.reviews
+  .section_header
+    margin-bottom: 0
 .subtitle
   text-align: center
   font-size: 16px
@@ -1463,6 +1467,9 @@ h2, .h2, .section_title
   +flex
   +wrap
   .item
+    &.slick-slide
+      padding-top: 30px
+      padding-bottom: 30px
     &:nth-child(3n+1)
       .reviews_item
         background: #E6E1EB
@@ -1475,6 +1482,8 @@ h2, .h2, .section_title
   .reviews_item
     padding: 35px 30px 20px
     margin-bottom: 30px
+    &:hover
+      +box-shadow(1px 0px 35px rgb(0 0 0 / 15%))
     .reviews_item_header
       +flex
       +ai-end
@@ -1602,6 +1611,7 @@ h2, .h2, .section_title
   color: #fff
   .h2, h2
     padding-bottom: 0
+    color: #fff
   .subtitle
     margin-bottom: 25px
   ul
@@ -2997,19 +3007,21 @@ h1, .h1, .page_title
     +flex
     +wrap
     .col1
-      max-width: 180px
+      width: 180px
       margin-right: 25px
       @media (max-width: 767px)
         width: 100%
         max-width: 100%
         margin-right: 0
     .col2
-      width: 486px
-      margin-right: 25px
+      width: calc(100% - 205px)
       @media (max-width: 767px)
         width: 100%
         max-width: 100%
         margin-right: 0
+      .flex
+        +flex
+        +ai-center
     .col3
       +flex
       +ai-end
@@ -3177,7 +3189,7 @@ h1, .h1, .page_title
         overflow: hidden
         text-overflow: ellipsis
         -webkit-line-clamp: 3
-        max-height: 67px
+        max-height: 65px
         @media (min-width: 1201px)
           +transition($transition_default)
           opacity: 0
@@ -3194,13 +3206,13 @@ h1, .h1, .page_title
     +transition($transition_default)
     margin-bottom: 30px
     @media (min-width: 1201px)
-      height: 340px
+      //height: 340px
       position: relative
       .news_item_content
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
+        //position: absolute
+        //top: 0
+        //left: 0
+        //width: 100%
     @media (max-width: 1200px)
       +box-shadow(1px 2px 25px rgba(0, 0, 0, 0.07))
     @media (min-width: 1201px)
@@ -3264,13 +3276,13 @@ h1, .h1, .page_title
         overflow: hidden
         text-overflow: ellipsis
         -webkit-line-clamp: 3
-        max-height: 67px
+        max-height: 65px
         opacity: 1
       .btn_default
         margin: 0
         @media (min-width: 1201px)
-          opacity: 0
-          +transition($transition_default)
+          opacity: 1
+          //+transition($transition_default)
 
 .phones
   li
@@ -3837,3 +3849,74 @@ h3, .h3
   .flex
     > span
       margin-right: 10px
+
+.product_item
+  &:hover
+    .product_img_box
+      .product_img
+        .img_back
+          +transform(translateX(0))
+          opacity: 1
+          z-index: 2
+      .label
+        z-index: 3
+      .product_item_btns
+        z-index: 3
+        .buy_one_click
+          bottom: 35px
+          opacity: 1
+        .add_to_basket
+          bottom: 0
+          opacity: 1
+
+  .product_img_box
+    position: relative
+    overflow: hidden
+    .product_img
+      .img_front
+        display: inline-block
+        position: relative
+        width: 100%
+        height: 205px
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+      .img_back
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 205px
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        +transition(all 0.5s ease-in-out)
+        +transform(translateX(-100%))
+        opacity: 0
+    .product_item_btns
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      .btn_default
+        max-width: 100%
+        width: 100%
+        height: 30px
+        position: absolute
+        +transition($transition_default)
+        opacity: 0.8
+        @media (max-width: 767px)
+          opacity: 1
+      .buy_one_click
+        bottom: -40px
+        border: 2px solid $violet
+        background: $violet
+        color: #fff
+
+        @media (max-width: 767px)
+          bottom: 35px
+      .add_to_basket
+        bottom: -40px
+        @media (max-width: 767px)
+          bottom: 0
