@@ -173,7 +173,14 @@ body
   font-family: $font
   background: #f2f3f4
 
-
+header
+  @media (max-width: 575px)
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 99
+    background: #fff
 strong
   font-weight: 500
 
@@ -1373,6 +1380,8 @@ h2, .h2, .section_title
         line-height: 22px
 .news
   background: #F2F3F4
+  @media (min-width: 1201px)
+    padding-bottom: 100px
 
 
 .why_choose_us
@@ -3998,8 +4007,8 @@ h3, .h3
         color: #fff
 
         &:hover
-          border: 2px solid #b348dd
-          background: #b348dd
+          border: 2px solid #a25fbd
+          background: #a25fbd
         @media (max-width: 767px)
           bottom: 0
           order: 1
@@ -4127,3 +4136,5 @@ h3, .h3
       opacity: 0
 
 
+.link_title
+  text-decoration: none

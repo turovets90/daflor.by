@@ -365,7 +365,15 @@ $(document).ready(function(){
             slidesToShow: 1,
             slidesToScroll: 1
         });
+
+        $(window).resize(function(){
+            var header_height = $('header').outerHeight();
+            $('header').next().css({'margin-top': header_height+'px'});
+        });
+        $(window).resize();
     }
+
+
 
 
 });
