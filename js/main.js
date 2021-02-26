@@ -337,6 +337,34 @@ $(document).ready(function(){
             $('.attitude input').val('0');
     });
 
+    jQuery('.reviews_item').each(function(){
+        var r_text=jQuery(this).find('.reviews_item_body');
+        var r_more=jQuery(this).find('.read_more');
+        var r_text_length=jQuery(r_text).text();
+        if(r_text_length.length >= 135){
+            jQuery(r_text).addClass('text_hide btn_show');
+        }
+        jQuery(r_more).click(function () {
+            if(jQuery(r_text).hasClass('text_hide')){
+                jQuery(r_more).text("Свернуть >");
+                jQuery(r_text).removeClass('text_hide');
+            }else{
+                jQuery(r_more).text("Подробнее >");
+                jQuery(r_text).addClass('text_hide');
+            }
+        });
+    });
+
+
+    if($(window).innerWidth() < 575){
+        $('.news .news_list').slick({
+            autoplay: false,
+            dots: false,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    }
 
 
 });
