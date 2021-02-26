@@ -881,7 +881,7 @@ strong
       .product_item_content
         .product_item_body
           .product_item_price-amount
-            +j-beetween
+            //+j-beetween
             .product_item_price
               +col
               +ai-center
@@ -1000,7 +1000,7 @@ strong
         +flex
         +ai-center
         +j-center
-        +j-beetween
+        //+j-beetween
 
         .product_item_price
           +flex
@@ -3662,6 +3662,7 @@ h3, .h3
     width: 20px
     height: 20px
     opacity: 1
+    z-index: 2
     &:before
       +b_a
       +m_a
@@ -3996,6 +3997,9 @@ h3, .h3
         background: $violet
         color: #fff
 
+        &:hover
+          border: 2px solid #b348dd
+          background: #b348dd
         @media (max-width: 767px)
           bottom: 0
           order: 1
@@ -4094,5 +4098,32 @@ h3, .h3
   .img
     height: 235px
     background-size: cover
+
+
+.news_item
+  &:hover
+    .news_item_img
+      &:before
+        opacity: 1
+      .btn_default
+        opacity: 1
+
+  .news_item_img
+    position: relative
+    +flex
+    +ai-center
+    +j-center
+    .btn_default
+      opacity: 0
+      position: relative
+
+    &:before
+      +b_a
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.3)
+      opacity: 0
 
 

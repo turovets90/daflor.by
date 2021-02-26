@@ -357,9 +357,10 @@ $(document).ready(function(){
 
 
     if($(window).innerWidth() < 575){
-        $('.news .news_list').slick({
+        $('.mobile_slider').slick({
             autoplay: false,
             dots: false,
+            infinite: false,
             arrows: true,
             slidesToShow: 1,
             slidesToScroll: 1
