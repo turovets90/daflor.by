@@ -4163,7 +4163,7 @@ h3, .h3
     display: none
 .desktop_hide
   @media (min-width: 1201px)
-    display: none
+    display: none !important
 .main_menu
   .top_nav
     background: #ca2270
@@ -4178,3 +4178,9 @@ h3, .h3
       width: 100%
       text-align: left
       color: #fff
+
+
+header
+  button[data-target="#feedback"]
+    @media (max-width: 767px)
+      display: none !important
