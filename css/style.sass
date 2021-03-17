@@ -1067,11 +1067,11 @@ strong
       .product_item_btns
         //display: none
         margin-top: 13px
-        margin-right: -8px
-        margin-left: -8px
-        margin-bottom: -8px
+
+
         @media (max-width: 767px)
-          margin-top: 0
+          margin: 0 -8px -8px
+
         .btn_default
           max-width: 100%
           @media (max-width: 575px)
@@ -4164,7 +4164,9 @@ h3, .h3
 
 .link_title
   text-decoration: none
-
+  &:hover
+    .h2, h2
+      color: $green
 .top_header
   @media (max-width: 1200px)
     display: none
