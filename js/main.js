@@ -113,7 +113,7 @@ $(document).ready(function(){
                     {
                         breakpoint: 575,
                         settings: {
-                            slidesToShow: 1
+                            slidesToShow: 2
                         }
                     }
                 ]
@@ -250,7 +250,7 @@ $(document).ready(function(){
                 {
                     breakpoint: 575,
                     settings: {
-                        slidesToShow: 1
+                        slidesToShow: 2
                     }
                 }
             ]
@@ -260,7 +260,7 @@ $(document).ready(function(){
             autoplay: false,
             dots: false,
             arrows: true,
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1
         });
     }else if($(window).innerWidth() < 767 && $('.category_slider .category_item').length > 2){
