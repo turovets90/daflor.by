@@ -1588,6 +1588,11 @@ h2, .h2, .section_title
 .reviews
   padding-bottom: 35px
 .reviews_slider
+  @media (max-width: 575px)
+    .slick-slide
+      height: 0
+      &.slick-current
+        height: auto
   .slick-dots
     bottom: -15px
 
