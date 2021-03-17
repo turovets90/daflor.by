@@ -1006,6 +1006,7 @@ strong
         margin-bottom: 15px
         @media (max-width: 767px)
           margin-bottom: 5px
+          min-height: auto
         &:hover
           color: $green_hover
       .product_item_price-amount
@@ -1066,6 +1067,9 @@ strong
       .product_item_btns
         //display: none
         margin-top: 13px
+        margin-right: -8px
+        margin-left: -8px
+        margin-bottom: -8px
         @media (max-width: 767px)
           margin-top: 0
         .btn_default
@@ -1119,6 +1123,7 @@ h2, .h2, .section_title
       +m_a
       width: 8px
       height: 12px
+      opacity: 1
   .slick-prev
     left: -5px
     @media (max-width: 1200px)
@@ -1464,6 +1469,7 @@ h2, .h2, .section_title
       +m_a
       width: 8px
       height: 12px
+      opacity: 1
   .slick-prev
     left: -5px
     @media (max-width: 1200px)
@@ -2193,6 +2199,7 @@ h1, .h1, .page_title
     &:before
       width: 13px
       height: 21px
+      opacity: 1
 
   .slick-prev
     left: 0
@@ -4168,6 +4175,9 @@ h3, .h3
   .top_nav
     background: #ca2270
     margin-bottom: 20px
+    li
+      &:first-child
+        display: none
   .top_header_contacts
     +wrap
     +j-start
