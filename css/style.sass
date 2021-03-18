@@ -3984,6 +3984,9 @@ h3, .h3
         background-size: cover
         background-position: center
         background-repeat: no-repeat
+        +transition($transition_default)
+        &:hover
+          +transform(scale(1.1, 1.1))
         @media (max-width: 767px)
           background-size: contain
       .img_front
