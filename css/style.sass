@@ -3106,6 +3106,9 @@ h1, .h1, .page_title
         span
           color: #777
           font-size: 13px
+    .btn_default
+      @media (max-width: 767px)
+        margin-bottom: 10px
     .field
       position: relative
       display: inline-block
@@ -3269,9 +3272,11 @@ h1, .h1, .page_title
           opacity: 0
       .btn_default
         margin: auto
+
         @media (min-width: 1201px)
           opacity: 0
           +transition($transition_default)
+
 .page_content
   .news_list
 
@@ -4210,3 +4215,9 @@ header
   button[data-target="#feedback"]
     @media (max-width: 767px)
       display: none !important
+
+
+.news_item_img
+  .btn_default, &:before
+    @media (max-width: 1200px)
+      display: none
